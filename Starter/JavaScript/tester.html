@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>FinalBot JavaScript Tester</title>
+    <script type="text/javascript" src="solve.js"></script>
+    <script type="text/javascript">
+        function runTest() {
+            try {
+                var input = document.getElementById('inputTextArea').value;
+                var output = solve(input);
+                document.getElementById('outputTextArea').value = output;
+            }
+            catch (e) {
+                document.getElementById('outputTextArea').value = "An error occurred:\n\n" + e;
+            }
+        }
+    </script>
+</head>
+<body>
+    <img src="logo.png" />
+    <h1>FinalBot JavaScript Tester</h1>
+
+    <h2>Instructions</h2>
+    <ol>
+        <li>Edit <strong>solve.js</strong> to implement your solution and save the file.</li>
+        <li>Refresh this page to load the updated solution.</li>
+        <li>Enter your test <strong>Input</strong> into the box below and press <strong>Test</strong> to review the <strong>Output</strong>.</li>
+        <li>Repeat the process until you are satisfied with your solution.</li>
+        <li>Upload your solution at <a href="http://beta.finalbot.com">FinalBot</a>.</li>
+    </ol>
+
+    <h2>Input</h2>
+    <textarea id="inputTextArea" rows="4" cols="50"></textarea>
+    <button onclick="runTest()">Test</button>
+    <h2>Output</h2>
+    <textarea id="outputTextArea" rows="4" cols="50" readonly></textarea>
+</body>
+</html>
