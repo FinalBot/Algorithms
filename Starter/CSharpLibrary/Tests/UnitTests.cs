@@ -13,6 +13,7 @@ namespace Tests
         [TestMethod]
         public void SampleTest()
         {
+            // Don't forget that the solution will return a string.
             Assert.AreEqual("3", Solver.Solve("1 2"));
         }
     }
